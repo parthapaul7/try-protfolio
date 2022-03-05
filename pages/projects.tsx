@@ -3,7 +3,11 @@ import React, { FC } from 'react'
 
 const Projects:NextPage = () => {
   return (
-    <div>projects</div>
+    <div>
+    
+    
+    </div>
+
   )
 }
 

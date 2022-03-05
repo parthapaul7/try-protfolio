@@ -5,7 +5,7 @@ import Projects from "./projects";
 
 const Home: NextPage = () => {
   return (
-    <div className="w-[100vw] h-auto m-0 p-1 bg-[#1D1D1D]">
+    <div className="w-[100vw] h-auto m-0 p-0 ">
       <Main/>          
       <Projects/>
     </div>
