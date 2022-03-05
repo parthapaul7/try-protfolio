@@ -1,10 +1,12 @@
 import { NextPage } from 'next'
-import React, { FC } from 'react'
 
-const Projects:NextPage = () => {
+interface ProjectProps{
+  curve:[Object,Object];
+}
+const Projects:NextPage<ProjectProps> = (props) => {
   return (
-    <div>
-    
+    <div className='relative h-[100vh] w-[100vw] overflow-hidden'>
+      {props.curve[0]}
     
     </div>
 

@@ -29,7 +29,7 @@ const Navbar: NextPage = () => {
       <div className="mr-auto ml-2">
         <Image src={logo} height={50} width={100} />
       </div>
-      <div className="mr-6" onClick={()=>{setOverlay(!overlay)}} >{links[4]}</div>
+      <div className="mr-6 sm:hidden" onClick={()=>{setOverlay(!overlay)}} >{links[4]}</div>
       <div className="hidden sm:flex px-4 space-x-5 justify-end" >
         <Link href="/">{links[0]}</Link>
         <Link href="/about">{links[1]}</Link>
