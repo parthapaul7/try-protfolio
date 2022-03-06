@@ -9,15 +9,15 @@ interface CurveProps{
 
 const Main:NextPage<CurveProps>= ({curves}) => {
   return (
-    <main className="relative overflow-hidden h-[100vh] mt-7">
+    <main className="relative overflow-hidden h-[100vh] mt-7 font-robotoMono">
         {curves[0]}
       <div className="my-14 flex flex-col-reverse sm:flex-row">
-        <div className="p-5 text-4xl text-white">
+        <div className="px-10 text-3xl text-white mx-auto sm:w-[53vw] md:text-7xl">
           Hi <br />
           Im Partha <br />
           Web Developer
         </div>
-        <Image src={mainlogo} width={500} height={300} />
+        <Image src={mainlogo} layout="intrinsic" />
       </div>
       <div className="text-white flex justify-evenly">
         <div>

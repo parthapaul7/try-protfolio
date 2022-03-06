@@ -25,7 +25,7 @@ const Navbar: NextPage = () => {
     <></>
   );
   return (
-    <nav className="w-[100vw] z-10 fixed h-12 top-0 bg-[#21325E] text-[#F0F0F0] flex justify-center items-center sm:justify-start">
+    <nav className=" font-robotoMono w-[100vw] z-10 fixed h-12 top-0 bg-[#21325E] text-[#F0F0F0] flex justify-center items-center sm:justify-start">
       <div className="mr-auto ml-2">
         <Image src={logo} height={50} width={100} />
       </div>
