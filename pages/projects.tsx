@@ -1,16 +1,9 @@
-import { NextPage } from 'next'
+import React from 'react'
 
-interface ProjectProps{
-  curve:[Object,Object];
-}
-const Projects:NextPage<ProjectProps> = (props) => {
+const projects = () => {
   return (
-    <div className='relative h-[100vh] w-[100vw] overflow-hidden'>
-      {props.curve[0]}
-    
-    </div>
-
+    <div>avilable soon</div>
   )
 }
 
-export default Projects
+export default projects
