@@ -1,10 +1,10 @@
 import logo from "../public/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { NextPage } from "next";
+import { NextComponentType, NextPage } from "next";
 import { useState } from "react";
 
-const Navbar: NextPage = () => {
+const Navbar:NextComponentType= () => {
   const links: string[] = [
     "<Home/>",
     "<AboutMe/>",
@@ -15,8 +15,9 @@ const Navbar: NextPage = () => {
   const [overlay, setOverlay] = useState(false);
 
   const navOverlayBtn = overlay ? (
-    <div onClick={()=>{setOverlay(!overlay)}} className="absolute h-[100vh] w-[100vw] top-[50px] flex flex-col justify-evenly items-center  bg-[#21325ef8] sm:hidden" >
-      <Link href="/">{links[0]}</Link>
+    <div onClick={()=>{setOverlay(!overlay)}} className="absolute h-[100vh] w-[100vw] top-[50px] flex flex-col space-y-10 items-center  bg-[#21325ef8] sm:hidden" >
+      <br />
+      <Link  href="/">{"<Home/>"}</Link>
       <Link href="/about">{links[1]}</Link>
       <Link href="/contact">{links[2]}</Link>
       <Link href="/projects">{links[3]}</Link>

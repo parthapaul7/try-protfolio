@@ -1,7 +1,8 @@
+import { NextPage } from 'next'
 import React from 'react'
 import Projects from '../components/Projects'
 
-const projects = () => {
+const projects:NextPage = () => {
   return (
     <div>
     </div>
