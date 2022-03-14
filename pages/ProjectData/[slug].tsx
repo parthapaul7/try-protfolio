@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import React from "react";
 import { useEffect, useState } from "react";
+import * as fs from 'fs'
 
 interface Projectdata {
   name: string;
@@ -15,10 +16,15 @@ const demo = {
   slug: "not given",
 };
 
-const Slug: NextPage = (props) => {
-  const router = useRouter();
-  const [project, setProject] = useState<Projectdata>(props.allPost);
-
+const Slug: NextPage = (props:any) => {
+  const [project, setProject] = useState(demo)
+  useEffect(() => {
+    setProject(props.allPost)
+  
+    return () => {
+    }
+  }, [props])
+  
   return (
     <div className="my-20">
       <div className="text-white m-8 p-8 ">
@@ -30,12 +36,22 @@ const Slug: NextPage = (props) => {
   );
 };
 
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: {slug:"project1.json" } },
+      { params: {slug:"project2.json" } }
+    ],
+    fallback: true // false or 'blocking'
+  };
+}
+export async function getStaticProps(context:any) {
+  const {slug}= context.params
 
-export async function getServerSideProps(context:any) {
-  const {slug}= context.query
+  
+    const allPost:Object = JSON.parse(await fs.promises.readFile(`projectData/${slug}`, "utf-8"));
 
-  const data=await fetch(`http://localhost:3000/api?slug=${slug}`)
-  const allPost=await data.json()
+  // const allPost=await data.json()
   return {
     props: {allPost} // will be passed to the page component as props
   };

@@ -28,7 +28,8 @@ const Navbar:NextComponentType= () => {
   return (
     <nav className=" font-robotoMono w-[100vw] z-10 fixed h-14 top-0 bg-[#21325E] text-[#F0F0F0] flex justify-center items-center sm:justify-start">
       <div className="mr-auto ml-2">
-        <Image src={logo} height={50} width={100} />
+        {/* <Image src={logo} height={50} width={100} alt="small logo" /> */}
+    <img src="logo.svg" alt="small logo" />
       </div>
       <div className="mr-6 sm:hidden" onClick={()=>{setOverlay(!overlay)}} >{links[4]}</div>
       <div className="hidden sm:flex px-4 space-x-5 justify-end" >

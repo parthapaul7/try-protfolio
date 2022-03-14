@@ -21,7 +21,8 @@ const Main:NextPage<CurveProps>= ({curves},props) => {
           Im Partha <br />
           Web Developer
         </div>
-        <Image src={mainlogo} layout="intrinsic" />
+        {/* <Image src={mainlogo} layout="intrinsic" alt="main-logo"/> */}
+        <img src="mainlogo.svg" alt="main logo" />
       </div>
       <div className="text-white flex justify-evenly">
         <div className=" rounded-xl bg-[#3e497ad7] px-2 py-1 ">
