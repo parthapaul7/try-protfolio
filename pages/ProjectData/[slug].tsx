@@ -15,26 +15,9 @@ const demo = {
   slug: "not given",
 };
 
-const Slug: NextPage = () => {
+const Slug: NextPage = (props) => {
   const router = useRouter();
-  const [project, setProject] = useState<Projectdata>(demo);
-
-  useEffect(() => {
-    if (!router.isReady) return;
-    fetch(`http://localhost:3000/api?slug=${router.query.slug}`)
-      .then((e) => {
-        console.log(e);
-        return e.json();
-      })
-      .then((data) => {
-        console.log(data);
-        setProject(data);
-      })
-      .catch((err) => {
-        setProject(err);
-      });
-    return () => {};
-  }, [router.isReady]);
+  const [project, setProject] = useState<Projectdata>(props.allPost);
 
   return (
     <div className="my-20">
@@ -47,4 +30,14 @@ const Slug: NextPage = () => {
   );
 };
 
+
+export async function getServerSideProps(context:any) {
+  const {slug}= context.query
+
+  const data=await fetch(`http://localhost:3000/api?slug=${slug}`)
+  const allPost=await data.json()
+  return {
+    props: {allPost} // will be passed to the page component as props
+  };
+}
 export default Slug;
