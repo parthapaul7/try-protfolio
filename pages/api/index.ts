@@ -5,13 +5,12 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  let data: object ;
 
   try {
-    data =JSON.parse (readFileSync(`projectData/${req.query.slug}`, "utf-8"));
+    const data:Object = JSON.parse(readFileSync(`projectData/${req.query.slug}`, "utf-8"));
     console.log(data);
+    res.status(200).send(data);
   } catch (err) {
-    data = err
+    res.status(500).send(err);
   }
-  res.status(200).send(data);
 }

@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import React from "react";
 import Projects from "../components/Projects";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 let projectData: object[] = [];
 const projects: NextPage = () => {
@@ -26,12 +27,14 @@ const projects: NextPage = () => {
       {posts.map((e: any, i) => {
         console.log(e.desc);
         return (
-          <div className="text-white">
-            <h3>{e.name}</h3>
-            <p key={i} className="text-white py-10">
-              {e.desc}
-            </p>
-          </div>
+          <Link href={`/ProjectData/${e.slug}`}>
+            <div className="text-white m-8 p-8 cursor-pointer">
+              <h3 className="text-4xl font-bold">{e.name}</h3>
+              <p key={i} className="text-white">
+                {e.desc.substring(0, 100)} .........
+              </p>
+            </div>
+          </Link>
         );
       })}
       ;
