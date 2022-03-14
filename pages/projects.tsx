@@ -14,7 +14,7 @@ const projects:NextPage= (props:any) => {
         return (
           <Link href={`/ProjectData/${e.slug}`}>
             <div className="text-white m-8 p-8 cursor-pointer">
-              <h3 className="text-4xl font-bold">{e.name}</h3>
+              <h3 className="text-4xl font-bold">{e && e.name}</h3>
               <p key={i} className="text-white">
                 {e.desc.substring(0, 100)} .........
               </p>
