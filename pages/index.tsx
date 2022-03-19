@@ -6,16 +6,6 @@ import wave1 from "../public/wave1.svg";
 import wave2 from "../public/wave2.svg";
 import Head from "next/head";
 
-const topCurve = (
-  <div className="absolute m-0 p-0 border-0 -z-10 left-0 -top-2 w-[100vw] sm:-top-12 md:-top-40 xl:-top-56 ">
-    <Image src={wave1} layout="responsive" />
-  </div>
-);
-const btmCurve = (
-  <div className="absolute -z-10  -left-0 -bottom-2 w-[100vw] sm:-bottom- md:-bottom-28 xl:-bottom-48">
-    <Image src={wave2} layout="responsive" />
-  </div>
-);
 
 const Home: NextPage = () => {
   return (
@@ -30,3 +20,18 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+const topCurve= (
+  <div className="absolute m-0 p-0 border-0 -z-10 left-0 -top-2 w-[100vw] sm:-top-12 md:-top-40 xl:-top-56 ">
+    <Image src={wave1} layout="responsive" />
+  </div>
+);
+const btmCurve= (
+  <div className="absolute -z-10  -left-0 -bottom-2 w-[100vw] sm:-bottom- md:-bottom-28 xl:-bottom-48">
+    <Image src={wave2} layout="responsive" />
+  </div>
+);
+
+const curve:[object,object] = [topCurve,btmCurve]
+
+export {curve}

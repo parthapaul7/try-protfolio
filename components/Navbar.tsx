@@ -31,7 +31,7 @@ const Navbar:NextComponentType= () => {
         <Image src={logo} height={50} width={100} />
       </div>
       <div className="mr-6 sm:hidden" onClick={()=>{setOverlay(!overlay)}} >{links[4]}</div>
-      <div className="hidden sm:flex px-4 space-x-5 justify-end" >
+      <div className="hidden sm:flex px-4 space-x-8 justify-end mr-10" >
         <Link href="/">{links[0]}</Link>
         <Link href="/about">{links[1]}</Link>
         <Link href="/contact">{links[2]}</Link>
