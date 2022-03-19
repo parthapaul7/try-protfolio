@@ -16,8 +16,18 @@ const demo = {
   slug: "not given",
 };
 
+<<<<<<< HEAD
 const Slug: NextPage = (props:any) => {
   const [project, setProject] = useState(demo)
+=======
+const Slug: NextPage = () => {
+  function createMarkup(content) {
+  return {__html: content};
+}
+  const router = useRouter();
+  const [project, setProject] = useState<Projectdata>(demo);
+
+>>>>>>> 227cf23ebbf9ff5ca7d15798ed45d49aa745db4c
   useEffect(() => {
     setProject(props.allPost)
   
@@ -28,9 +38,9 @@ const Slug: NextPage = (props:any) => {
   return (
     <div className="my-20">
       <div className="text-white m-8 p-8 ">
-        <h3 className="text-4xl font-bold my-5">{project.name}</h3>
+        <h3 className="text-4xl font-bold my-5">{project && project.name}</h3>
         {/* remember slug is lowercase  */}
-        <p className="text-white">{project.desc}</p>
+        <p className="text-white" dangerouslySetInnerHTML={createMarkup(project.desc)}></p>
       </div>
     </div>
   );
