@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import React from "react";
 import { useEffect, useState } from "react";
+import * as fs from 'fs'
 
 interface Projectdata {
   name: string;
@@ -15,13 +16,20 @@ const demo = {
   slug: "not given",
 };
 
-const Slug: NextPage = (props: any) => {
+const Slug: NextPage = (props) => {
+  function createMarkup(content:any) {
+  return {__html: content};
+}
   const router = useRouter();
-  const [project, setProject] = useState<Projectdata>(props.allPost);
-  function createMarkup(content: any) {
-    return { __html: content };
-  }
+  const [project, setProject] = useState<Projectdata>(demo);
 
+  useEffect(() => {
+    setProject(props.allPost)
+  
+    return () => {
+    }
+  }, [props])
+  
   return (
     <div className="my-20">
       <div className="text-white m-8 p-8 ">

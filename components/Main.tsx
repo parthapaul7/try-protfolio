@@ -28,7 +28,8 @@ const Main: NextPage<CurveProps> = ({ curves }, props) => {
             </div>
           </div>
         </div>
-        <Image src={mainlogo} layout="intrinsic" />
+        {/* <Image src={mainlogo} layout="intrinsic" alt="main-logo"/> */}
+        <img src="mainlogo.svg" alt="main logo" />
       </div>
 
       {curves[1]}
