@@ -10,9 +10,7 @@ import Head from "next/head";
 const Home: NextPage = () => {
   return (
     <div className="w-[100vw] h-auto m-0 p-0 ">
-      <Head>
-        <title>Partha Paul</title>
-      </Head>
+      
       <Main curves={[topCurve, btmCurve]} />
       <Projects curve={[topCurve, btmCurve]} />
     </div>
