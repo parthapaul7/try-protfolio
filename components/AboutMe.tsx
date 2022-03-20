@@ -33,7 +33,7 @@ const AboutMe = () => {
             dignissimos!
           </p>
           <br />  
-          <div className="text-3xl my-5 ">Follow Me </div>
+          <div className="text-3xl mt-20 mb-5 ">Follow Me </div>
           <div className="flex space-x-5">
             <div>twitter</div>
             <div>linkedin</div>
@@ -43,7 +43,9 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      <div className="text-4xl text-center text-white my-10 ">Technologies used </div>
+      <h1 className="text-4xl text-center text-white my-10 underline">Technologies used </h1>
+      <div className=" w-[90vw] h-96 mx-auto bg-green-400 mb-20"> </div>
+
     </>
   );
 };
