@@ -16,7 +16,7 @@ const demo = {
   slug: "not given",
 };
 
-const Slug: NextPage = (props) => {
+const Slug: NextPage = (props:any) => {
   function createMarkup(content:any) {
   return {__html: content};
 }
