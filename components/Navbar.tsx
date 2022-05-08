@@ -26,8 +26,8 @@ const Navbar:NextComponentType= () => {
     <></>
   );
   return (
-    <nav className=" font-robotoMono w-[100vw] z-10 fixed h-14 top-0 bg-[#21325E] text-[#F0F0F0] flex justify-center items-center sm:justify-start">
-      <div className="mr-auto ml-2">
+    <nav className=" font-robotoMono w-[100vw] z-10 fixed h-16 top-0 bg-[#21325E] text-[#F0F0F0] flex justify-center items-center sm:justify-start">
+      <div className="mr-auto ml-12">
         {/* <Image src={logo} height={50} width={100} alt="small logo" /> */}
     <img src="logo.svg" alt="small logo" />
       </div>
