@@ -16,7 +16,7 @@ const Main: NextPage<CurveProps> = ({ curves }, props) => {
         <div className=" text-3xl text-white mx-auto sm:w-[60vw] sm:ml-28 sm:text-4xl  md:text-7xl md:my-auto">
           <div>
             <div>Hi </div>
-            <div className="">I'm Partha </div>
+            <div className="">{"I'm Partha"} </div>
            <div> Web Developer</div>
           </div>
           <div className="text-base mt-10 flex justify-between sm:space-x-10 sm:justify-start">

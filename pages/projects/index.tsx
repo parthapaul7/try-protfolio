@@ -1,17 +1,17 @@
 import { GetServerSideProps, NextPage } from "next";
 import Projects from "../../components/Projects";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Link from "next/link";
 import { curve } from "../index";
 
 const projects: NextPage = (props: any) => {
   console.log(props);
-  const [posts, setposts] = useState(props.allPost);
+  // const [posts, setposts] = useState(props.allPost);
 
   return (
     <div className="">
           <Projects curve={curve}/>
-      {posts.map((e: any, i: number) => {
+      {props.allPost.map((e: any, i: number) => {
         console.log(e.desc);
         return (
           <>
